@@ -1,0 +1,19 @@
+:root {
+  /* Cores */
+  --primary-color: #FEAFBE; 
+  --white-color: #FFFFFF; 
+  --secondary-color: #CDD7F7;
+  --text-color: #8892B0; 
+  --box-color: #2D367E; 
+  --background-color: #040615; 
+
+  /* Fontes */
+  --primary-font: 'Arial', sans-serif;
+  --secondary-font: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--primary-font);
+}
