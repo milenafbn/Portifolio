@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin: 50px 0px 0px 0px;
+  }
+  
+  .nav a {
+    font-family: 'consolas';
+    font-weight: bolder;
+    margin-left: 50px;
+    text-decoration: none;
+    color: var(--white-color);
+  }
+
+  .nav a:hover {
+    color: var(--primary-color);
+  }
+
+.nav a.active {
+    color: var(--primary-color);
+}
+
+.nav a:focus {
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Adjust the distance from the text */
+    text-decoration-thickness: 2px; /* Adjust the thickness of the underline */
+    color: var(--primary-color);
+    transition: text-underline-offset 1s ease, text-decoration-thickness 1s ease, color 1s ease;
+}
+  
+.toggleButton{
+    display: 'flex';
+    align-items: 'center';
+    gap: '8px';
+    cursor: pointer;
+    font-family: 'consolas';
+    font-weight: bolder;
+    color: var(--white-color);
+    /* style={{ display: 'flex', alignItems: 'center', gap: '8px' }} */
+  }
