@@ -1,42 +1,86 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    margin: 50px 0px 0px 0px;
-  }
-  
-  .nav a {
-    font-family: 'consolas';
-    font-weight: bolder;
-    margin-left: 50px;
-    text-decoration: none;
-    color: var(--white-color);
-  }
-
-  .nav a:hover {
-    color: var(--primary-color);
-  }
-
-.nav a.active {
-    color: var(--primary-color);
+/* Header.css */
+.custom-navbar {
+  background-color: transparent !important;
+  padding: 2rem 1rem;
+  margin-top: 20px;
 }
 
-.nav a:focus {
-    text-decoration: underline;
-    text-underline-offset: 10px; /* Adjust the distance from the text */
-    text-decoration-thickness: 2px; /* Adjust the thickness of the underline */
-    color: var(--primary-color);
-    transition: text-underline-offset 1s ease, text-decoration-thickness 1s ease, color 1s ease;
+.logo {
+  height: 40px; /* Tamanho padrão para desktop */
+  width: auto;
+  transition: height 0.3s ease;
 }
-  
-.toggleButton{
-    display: 'flex';
-    align-items: 'center';
-    gap: '8px';
-    cursor: pointer;
-    font-family: 'consolas';
-    font-weight: bolder;
-    color: var(--white-color);
-    /* style={{ display: 'flex', alignItems: 'center', gap: '8px' }} */
+
+.custom-nav {
+  margin: 0 auto;
+}
+
+.custom-nav-link {
+  font-family: 'consolas', monospace;
+  font-weight: bolder;
+  color: white !important;
+  margin: 0 25px;
+  padding: 0.5rem 0;
+  position: relative; 
+  transition: color 0.3s ease;
+}
+
+.custom-nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #feafbe;
+  transition: width 0.3s ease;
+}
+
+.custom-nav-link:hover:after,
+.custom-nav-link:focus:after,
+.custom-nav-link.active:after {
+  width: 100%;
+}
+
+.custom-nav-link:hover, 
+.custom-nav-link:focus,
+.custom-nav-link.active {
+  color: #feafbe !important;
+}
+
+
+.navbar-toggler {
+  border-color: #feafbe !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28254, 175, 190, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+  font-family: 'consolas', monospace;
+  font-weight: bolder;
+  color: white;
+}
+
+.language-toggle span {
+  margin: 0 10px;
+}
+
+@media (max-width: 992px) {
+  .custom-nav-link {
+    margin: 10px 0;
+    text-align: center;
   }
+  
+  .language-toggle {
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .logo {
+    height: 30px; /* Tamanho menor para mobile */
+  }
+}

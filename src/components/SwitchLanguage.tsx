@@ -1,28 +1,30 @@
 import React from 'react';
-import { Space, Switch, ConfigProvider } from 'antd';
+import { Switch, ConfigProvider } from 'antd';
 import '../styles/SwitchLanguage.css';
 
 const onChange = (checked: boolean) => {
-    console.log(`switch to ${checked}`);
-  };
+  console.log(`switch to ${checked}`);
+};
 
 const SwitchLanguage: React.FC = () => (
-//     <ConfigProvider
-//     theme={{
-//       token: {
-//         // Seed Token
-//         colorPrimary: '#00b96b',
-//         borderRadius: 2,
-
-//         // Alias Token
-//         colorBgContainer: '#f6ffed',
-//       },
-//     }}
-//   >
-
-    <Switch 
-    defaultChecked onChange={onChange}
-    />
+  <ConfigProvider
+    theme={{
+      token: {
+        colorPrimary: '#5B4150',
+        colorBgContainer: '#fff',
+      },
+      components: {
+        Switch: {
+          handleBg: '#fff',
+          colorPrimary: '#5B4150',
+        },
+        
+        
+      },
+    }}
+  >
+    <Switch defaultChecked onChange={onChange} />
+  </ConfigProvider>
 );
 
 export default SwitchLanguage;
