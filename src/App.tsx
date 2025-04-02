@@ -5,6 +5,7 @@ import './styles/App.css'
 import Header from './components/Header'
 import Hero from './sections/Hero'
 import About from './sections/About'
+import Skills from './sections/Skills'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Hero />
       <About />
+      <Skills />
     </>
   )
 }
