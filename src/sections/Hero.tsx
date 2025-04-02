@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
             <div className="hero-content">
                 <p className="greeting">Olá! meu nome é</p>
                 <h1 className="name">Milena Neves<span className="cursor">_</span></h1>
-                <h2 className="title">Desenvolvedora de Software</h2>
+                <h2 className="title">Desenvolvedora Full-stack</h2>
                 
                 <DynamicText/>
                 
