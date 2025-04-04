@@ -3,6 +3,7 @@ import './styles/App.css'
 import Header from './layout/Header'
 import Footer from './layout/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import CustomCursor from './components/CustomCursor'
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Skills from './sections/Skills'
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <>
+      <CustomCursor />
       <Header />
       <Hero />
       <About />
