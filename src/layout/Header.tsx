@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../assets/{ M }.svg';
-import SwitchLanguage from './SwitchLanguage';
+import SwitchLanguage from '../components/SwitchLanguage';
 import '../styles/Header.css'; // Mantenha seus estilos personalizados
 
 function Header() {
