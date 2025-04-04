@@ -26,9 +26,6 @@ const Hero: React.FC = () => {
                 <a href="mailto:milena.neves.dev@gmail.com" className="social-icon email">
                     <i className="bi-envelope"></i>
                 </a>
-                <a href="https://wa.me/seunumero" target="_blank" rel="noopener noreferrer" className="social-icon whatsapp">
-                    <i className="bi-whatsapp"></i>
-                </a>
             </div>
       </div>
     );

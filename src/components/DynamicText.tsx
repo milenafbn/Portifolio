@@ -3,7 +3,7 @@ import '../styles/Hero.css';
 
 const DynamicText: React.FC = () => {
         const [displayText, setDisplayText] = useState('');
-        const fullText = 'CCom foco em back-end, gosto de criar, estruturar e organizar soluções, eficientes, sempre explorando e estudando novas tecnologias.';
+        const fullText = 'BBuilding efficient and user-friendly applications, always learning and improving.';
         const speed = 50;
         const textRef = useRef<HTMLParagraphElement>(null);
     
@@ -35,7 +35,7 @@ const DynamicText: React.FC = () => {
     
           // Função para destacar palavras-chave
         const highlightKeywords = (text: string) => {
-            const keywords = ['back-end', 'criar', 'estruturar', 'organizar', 'eficientes'];
+            const keywords = ['efficient', 'user-friendly', 'learning', 'improving'];
             let highlightedText = text;
             
             keywords.forEach(keyword => {
