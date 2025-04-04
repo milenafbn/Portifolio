@@ -1,0 +1,184 @@
+/* Experience.css */
+.experience-section {
+    padding: 60px 0;
+    color: white;
+    min-height: auto;
+  }
+  
+  .section-title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .experience-container {
+    display: flex;
+    margin-top: 30px;
+  }
+  
+  .companies-list {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid rgba(254, 175, 190, 0.3);
+    padding-left: 0;
+  }
+  
+  .company-item {
+    position: relative;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px 0;
+    font-family: 'consolas', monospace;
+    border-left: 3px solid transparent;
+    margin-left: -2px;
+  }
+  
+  .company-item:hover {
+    background-color: rgba(254, 175, 190, 0.05);
+  }
+  
+  .company-item.active {
+    background-color: rgba(254, 175, 190, 0.1);
+    border-left: 3px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .active-indicator {
+    position: absolute;
+    left: -2px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--primary-color);
+  }
+  
+  .company-name {
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .experience-details {
+    position: relative;
+    min-height: 300px;
+  }
+  
+  .experience-content {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .role-title {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+  
+  .company-location {
+    color: var(--primary-color);
+    font-family: 'consolas', monospace;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    background-color: rgba(254, 175, 190, 0.1);
+    border-radius: 4px;
+  }
+  
+  .experience-period {
+    color: #a0a0a0;
+    font-family: 'consolas', monospace;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+  
+  .responsibilities-list {
+    color: var(--text-color);
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .responsibility-item {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-start;
+  }
+  
+  .bullet {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    margin-right: 15px;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .experience-container {
+      flex-direction: column;
+    }
+  
+    .companies-list {
+      flex-direction: row;
+      overflow-x: auto;
+      border-left: none;
+      border-bottom: 2px solid rgba(254, 175, 190, 0.3);
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      white-space: nowrap;
+    }
+  
+    .company-item {
+      border-left: none;
+      border-bottom: 3px solid transparent;
+      margin-left: 0;
+      margin-right: 15px;
+      padding: 8px 12px;
+    }
+  
+    .company-item.active {
+      border-left: none;
+      border-bottom: 3px solid var(--primary-color);
+    }
+  
+    .active-indicator {
+      left: 0;
+      bottom: -2px;
+      top: auto;
+      height: 3px;
+      width: 100%;
+    }
+  
+    .experience-details {
+      min-height: 250px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+  
+    .role-title {
+      font-size: 1.3rem;
+    }
+  
+    .experience-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .company-location {
+      margin-top: 5px;
+    }
+  }

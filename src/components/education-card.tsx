@@ -7,8 +7,6 @@ interface EducationCardProps {
     period: string;
 }
 
-
-
 const Education_card: React.FC<EducationCardProps> = ({title, institution, period}) => {
   return (
     <div className="education-card">
