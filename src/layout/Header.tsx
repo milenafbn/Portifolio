@@ -22,9 +22,9 @@ function Header() {
             <Nav.Link href="#projects" className="custom-nav-link">Projetos</Nav.Link>
           </Nav>
           <div className="language-toggle">
-            <span>EN</span>
-            <SwitchLanguage />
             <span>PT</span>
+            <SwitchLanguage />
+            <span>EN</span>
           </div>
         </Navbar.Collapse>
       </Container>

@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Hero.css';
+import { useLanguage } from '../context/LanguageContext';
 
 const DynamicText: React.FC = () => {
+        const { textos } = useLanguage();
         const [displayText, setDisplayText] = useState('');
-        const fullText = 'BBuilding efficient and user-friendly applications, always learning and improving.';
-        const speed = 50;
         const textRef = useRef<HTMLParagraphElement>(null);
+        const fullText = textos.hero[0].description.replace(/<[^>]*>?/gm, ''); // limpa HTML
+        const speed = 50;
     
         useEffect(() => {
             let index = 0;
@@ -14,28 +16,27 @@ const DynamicText: React.FC = () => {
     // Para adicionar variações aleatórias na velocidade de digitação:
             const typeText = () => {
                 if (index < fullText.length) {
-                setDisplayText(prev => prev + fullText.charAt(index));
-                index++;
-                // Velocidade base + variação aleatória
-                const randomSpeed = speed + Math.random() * 50;
-                timer = setTimeout(typeText, randomSpeed);
-                }
+                    setDisplayText(prev => prev + fullText.charAt(index));
+                    index++;
+                    const randomSpeed = speed + Math.random() * 50;
+                    timer = setTimeout(typeText, randomSpeed);
+                    }
             };
     
             const startTimer  = setTimeout(() => {
                 typeText();
-            }, 1000); 
+            }, 5000); 
     
             return () => {
                 clearTimeout(timer);
                 clearTimeout(startTimer);
             }
         
-        }, [])
+        }, [fullText])
     
           // Função para destacar palavras-chave
         const highlightKeywords = (text: string) => {
-            const keywords = ['efficient', 'user-friendly', 'learning', 'improving'];
+            const keywords = ['efficient', 'user-friendly', 'learning', 'improving', 'eficientes', 'user-friendly', 'aprendendo', 'melhorando'];
             let highlightedText = text;
             
             keywords.forEach(keyword => {

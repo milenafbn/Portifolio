@@ -15,7 +15,7 @@ const Skills = () => {
   return (
     <section id="skills" className="skills-section">
         <Container>
-            <h2 className="section-title">Habilidades</h2>
+            <h2 className="section-title">Skills</h2>
 
                 
             <Row className="skill-categories">
