@@ -12,48 +12,109 @@ interface Project {
   technologies: string[];
   githubLink?: string;
   liveLink?: string;
-  featured: boolean;
+  contribution: boolean;
 }
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'featured'>('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'contribution'>('all');
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   
   const projects: Project[] = [
+
+    {
+      id: 'hans-plus',
+      title: 'Hans+',
+      description: 'Aplicativo mobile desenvolvido para o TCC, voltado para apoiar o tratamento de hanseníase. Conta com funcionalidades educativas e de acompanhamento do tratamento.',
+      image: '/images/projects/hans-plus.png',
+      technologies: ['Flutter', 'Dart', 'Android'],
+      githubLink: 'https://github.com/seuusuario/hans-plus',
+      contribution: true
+    },
+    {
+      id: 'monitora-saude',
+      title: 'Monitora Saúde',
+      description: 'Painel de monitoramento de dados em saúde, utilizado por 217 municípios. Desenvolvido com foco em visualização de dados e usabilidade.',
+      image: '/images/projects/monitora-saude.png',
+      technologies: ['Laravel', 'PHP', 'JavaScript', 'PostgreSQL', 'Figma', 'Blade', 'HTML', 'CSS', 'Trello'],
+      contribution: true
+    },
+    {
+      id: 'geohosp',
+      title: 'GeoHosp - Sistema de Gestão Hospitalar',
+      description: 'Sistema completo para gestão de hospitais, incluindo módulos de refeições, exames e consultas. Projeto colaborativo focado em otimização de processos internos.',
+      image: '/images/projects/geohosp.png',
+      technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+      githubLink: 'https://github.com/seuusuario/geohosp',
+      contribution: true
+    },
+    {
+      id: 'renaveh',
+      title: 'Renaveh',
+      description: 'Sistema centralizado para gestão de pacientes e notificações de saúde. Projeto colaborativo com foco em organização e rastreamento de informações clínicas.',
+      image: '/images/projects/renaveh.png',
+      technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+      githubLink: 'https://github.com/seuusuario/renaveh',
+      contribution: true
+    },
     {
       id: 'gerenciador-viagens',
       title: 'Gerenciador de Viagens',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec cursus ipsum, ut mollis lacus. Sed et nunc fermentum massa lobortis tempor. Nulla nec porta nibh. Nam et quam et purus lacinia finibus. Fusce oro quam, fringilla eu tempus id, congue sit amet arcu. Aenean non turpis non augue pulvinar gravida at est felis.',
-      image: '/images/projects/gerenciador-viagens.png', // Substitua pelo caminho real da imagem
+      description: 'API REST desenvolvida em Java com Spring Boot para gerenciar viagens e destinos, com foco em escalabilidade e boas práticas de desenvolvimento backend.',
+      image: '/images/projects/gerenciador-viagens.png',
       technologies: ['Java', 'Spring Boot'],
       githubLink: 'https://github.com/seuusuario/gerenciador-viagens',
-      featured: true
+      contribution: false
     },
     {
-      id: 'sistema-hospitalar',
-      title: 'Sistema Hospitalar',
-      description: 'Um sistema completo para gerenciamento de hospital, incluindo módulos de agendamento, prontuário eletrônico e gestão de medicamentos. Desenvolvido com foco em usabilidade e segurança de dados.',
-      image: '/images/projects/sistema-hospitalar.png',
-      technologies: ['PHP', 'Laravel', 'MySQL', 'JavaScript'],
-      githubLink: 'https://github.com/seuusuario/sistema-hospitalar',
-      liveLink: 'https://sistema-hospitalar-demo.com',
-      featured: true
+      id: 'ml-bankmarketing',
+      title: 'Projeto de Machine Learning - Bank Marketing',
+      description: 'Solução de machine learning utilizando o dataset Bank Marketing para prever respostas de clientes em campanhas bancárias. Inclui pré-processamento, validação cruzada e avaliação de modelos.',
+      image: '/images/projects/ml-bankmarketing.png',
+      technologies: ['Python', 'Scikit-Learn', 'Pandas', 'NumPy', 'Matplotlib'],
+      githubLink: 'https://github.com/seuusuario/bankmarketing-ml',
+      contribution: true
     },
     {
-      id: 'app-delivery',
-      title: 'Aplicativo de Delivery',
-      description: 'Aplicativo móvel para entrega de produtos com rastreamento em tempo real, sistemas de avaliação e integração com múltiplos meios de pagamento.',
-      image: '/images/projects/app-delivery.png',
-      technologies: ['Flutter', 'Dart', 'Firebase'],
-      githubLink: 'https://github.com/seuusuario/app-delivery',
-      featured: false
+      id: 'cadserv',
+      title: 'Cadserv',
+      description: 'Sistema de gerenciamento de funcionários para controle de dados pessoais, férias, escolaridade e lotação. Projeto colaborativo.',
+      image: '/images/projects/cadserv.png',
+      technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+      githubLink: 'https://github.com/seuusuario/cadserv',
+      contribution: true
+    },
+    {
+      id: 'primeira-infancia-sem-fome',
+      title: 'Primeira Infância Sem Fome',
+      description: 'Sistema de gerenciamento de dados de funcionários em projetos sociais, incluindo cadastro, férias e escolaridade. Projeto colaborativo.',
+      image: '/images/projects/primeira-infancia.png',
+      technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+      githubLink: 'https://github.com/seuusuario/primeira-infancia-sem-fome',
+      contribution: true
+    },
+    {
+      id: 'intelligent-snake-solver',
+      title: 'Intelligent Snake Solver',
+      description: 'Agente inteligente que utiliza o algoritmo A* para resolver automaticamente uma versão do jogo Snake. Projeto acadêmico de IA baseado em objetivos.',
+      image: '/images/projects/snake-solver.png',
+      technologies: ['Python', 'Pygame', 'Algoritmo A*'],
+      githubLink: 'https://github.com/seuusuario/intelligent-snake-solver',
+      contribution: false
+    },
+    {
+      id: 'mario-game',
+      title: 'Mario Game',
+      description: 'Jogo arcade inspirado no clássico Mario, desenvolvido utilizando JavaScript e HTML5 Canvas. Possui animações, obstáculos e sistema de pontuação.',
+      image: '/images/projects/mario-game.png',
+      technologies: ['JavaScript', 'HTML', 'CSS', 'Canvas'],
+      githubLink: 'https://github.com/seuusuario/mario-game',
+      contribution: false
     }
-    // Adicione mais projetos conforme necessário
   ];
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 
-    : projects.filter(project => project.featured);
+    : projects.filter(project => project.contribution);
 
   const handleProjectClick = (projectId: string) => {
     setSelectedProject(projectId === selectedProject ? null : projectId);
@@ -72,10 +133,10 @@ const Projects = () => {
             Todos
           </button>
           <button 
-            className={`filter-btn ${activeFilter === 'featured' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('featured')}
+            className={`filter-btn ${activeFilter === 'contribution' ? 'active' : ''}`}
+            onClick={() => setActiveFilter('contribution')}
           >
-            Destaques
+            Colaborações
           </button>
         </div>
         
