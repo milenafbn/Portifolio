@@ -19,29 +19,32 @@ const Experience = () => {
       id: 'ses',
       company: 'Secretaria de Estado da Saúde do Maranhão',
       shortName: 'SES/MA',
-      role: 'Desenvolvedora de Software',
+      role: 'Desenvolvedora Full Stack',
       period: 'Set 2023 - No momento',
       location: 'São Luís, MA',
       responsibilities: [
         'Desenvolveu e manteve sistemas relacionados à saúde, utilizando o framework Laravel para implementar a arquitetura MVC',
-        'Desenvolveu e manteve sistemas relacionados à saúde, utilizando o framework Laravel para implementar a arquitetura MVC',
-        'Desenvolveu e manteve sistemas relacionados à saúde, utilizando o framework Laravel para implementar a arquitetura MVC'
+        'Implementou funcionalidades completas no back-end, incluindo criação de rotas, controllers, models, middlewares e lógica de negócios (CRUD)',
+        'Configurou regras de acesso e permissões por meio de sistemas de papéis e autenticação.',
+        'Colaborou com a equipe em reuniões semanais de sprint, contribuindo com sugestões de melhoria e revisão de tarefas.',
+        'Participou da modelagem e implementação de bancos de dados relacionais',
+        'Desenvolveu interfaces responsivas e intuitivas com Blade, HTML, CSS e JavaScript, contribuindo para uma melhor experiência do usuário.'
       ]
     },
     {
       id: 'cdl',
       company: 'CDL',
       shortName: 'CDL',
-      role: 'Desenvolvedora Full Stack',
+      role: 'Estagiária TI',
       period: 'Jan 2022 - Ago 2023',
       location: 'São Luís, MA',
       responsibilities: [
-        'Desenvolveu aplicações web completas utilizando React no frontend e Laravel no backend',
-        'Implementou sistemas de gestão e análise de dados para empresas associadas',
-        'Colaborou em equipes ágeis para entrega de projetos dentro dos prazos estabelecidos'
+        'Fornecer assistência aos usuários na utilização dos sistemas da empresa.',
+        'Realizar manutenção e conserto de equipamentos de informática.',
+        'Configurar softwares básicos.',
+        'Participação do desenvolvimento do site da empresa'
       ]
     },
-    // Você pode adicionar mais experiências aqui seguindo o mesmo formato
   ];
 
   const [selectedExp, setSelectedExp] = useState<string>(experiences[0].id);
