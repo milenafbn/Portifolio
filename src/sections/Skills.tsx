@@ -7,7 +7,7 @@ const Skills = () => {
   const skillsData = {
     languages: ["Java", "PHP", "TypeScript", "Python", "Dart", "JavaScript", "C"],
     frontend: ["HTML", "CSS", "React", "Bootstrap"],
-    backend: ["Laravel", "Spring Boot", "Flutter"],
+    backend: ["Laravel", "Spring Boot", "Flutter", "NestJS"],
     databases: ["MySQL", "PostgreSQL", "Firebase"],
     tools: ["Git", "Trello", "Figma", "Jira"]
   };
