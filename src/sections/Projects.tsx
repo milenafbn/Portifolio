@@ -16,7 +16,7 @@ interface Project {
 }
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'contribution'>('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'contribution' | 'personal'>('all');
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   
   const projects: Project[] = [
@@ -112,9 +112,12 @@ const Projects = () => {
     }
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.contribution);
+  const filteredProjects = 
+    activeFilter === 'all'
+      ? projects
+      : activeFilter === 'contribution'
+        ? projects.filter(project => project.contribution)
+        : projects.filter(project => !project.contribution);
 
   const handleProjectClick = (projectId: string) => {
     setSelectedProject(projectId === selectedProject ? null : projectId);
@@ -132,6 +135,14 @@ const Projects = () => {
           >
             Todos
           </button>
+
+          <button 
+            className={`filter-btn ${activeFilter === 'personal' ? 'active' : ''}`}
+            onClick={() => setActiveFilter('personal')}
+          >
+            Pessoal
+          </button>
+
           <button 
             className={`filter-btn ${activeFilter === 'contribution' ? 'active' : ''}`}
             onClick={() => setActiveFilter('contribution')}
