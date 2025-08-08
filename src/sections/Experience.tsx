@@ -15,12 +15,27 @@ interface ExperienceItem {
 
 const Experience = () => {
   const experiences: ExperienceItem[] = [
+        {
+      id: 'Dynamos',
+      company: 'Dynamos',
+      shortName: 'Dynamos',
+      role: 'Desenvolvedora Full Stack',
+      period: 'Abr 2025 - No momento',
+      location: 'São Luís, MA',
+      responsibilities: [
+        'Exerceu papel de liderança técnica sobre equipe júnior, coordenando estagiários no desenvolvimento de sistemas, sendo responsável por organizar demandas, modelar soluções técnicas, elaborar fluxos de processos e conduzir reuniões de alinhamento',
+        'Desenvolveu e deu manutenção em funcionalidades back-end utilizando PHP',
+        'Desenvolveu API’S para comunicação entre sistemas internos e externos',
+        'Criou interfaces dinâmicas integradas via AJAX, com respostas JSON e manipulação assíncrona dos dados',
+        ' Realizou o levantamento e modelagem de dados, criando tabelas, relacionamentos e views otimizadas em MySQL',
+      ]
+    },
     {
       id: 'ses',
       company: 'Secretaria de Estado da Saúde do Maranhão',
       shortName: 'SES/MA',
       role: 'Desenvolvedora Full Stack',
-      period: 'Set 2023 - No momento',
+      period: 'Set 2023 - Abr 2025',
       location: 'São Luís, MA',
       responsibilities: [
         'Desenvolveu e manteve sistemas relacionados à saúde, utilizando o framework Laravel para implementar a arquitetura MVC',

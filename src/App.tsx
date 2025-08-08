@@ -9,20 +9,24 @@ import About from './sections/About'
 import Skills from './sections/Skills'
 import Experience from './sections/Experience'
 import Projects from './sections/Projects'
+import { LanguageProvider } from './context/LanguageContext';
+
 
 function App() {
 
   return (
     <>
-      <CustomCursor />
-      <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Footer />
-      <ScrollToTop />
+      <LanguageProvider>
+        <CustomCursor />
+        <Header />
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Footer />
+        <ScrollToTop />
+      </LanguageProvider>
     </>
   )
 }
