@@ -170,6 +170,36 @@
     color: white;
     transform: translateY(-2px);
   }
+
+  .projects-scroll-container {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+  /* largura da scrollbar */
+  .projects-scroll-container::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* track (fundo da barra) */
+  .projects-scroll-container::-webkit-scrollbar-track {
+    background: #111321;
+    border-radius: 5px;
+  }
+
+  /* polegar (a parte que você arrasta) */
+  .projects-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #3b3246;
+    border-radius: 5px;
+    border: 2px solid #ffffff00; /* cria um espaço ao redor para dar efeito */
+  }
+
+  /* efeito ao passar o mouse */
+  .projects-scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
   
   /* Responsividade */
   @media (max-width: 992px) {

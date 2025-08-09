@@ -61,7 +61,7 @@ const Projects = () => {
           </button>
         </div>
         
-        <div style={{ maxHeight: '600px', overflowY: 'auto', paddingRight: '8px' }}>
+        <div className="projects-scroll-container" style={{ maxHeight: '600px', overflowY: 'auto', paddingRight: '8px' }}>
           <motion.div 
         className="projects-grid"
         initial={{ opacity: 0 }}
