@@ -22,8 +22,8 @@ function Header() {
           <Nav className="mx-auto custom-nav">
             <Nav.Link href="#about" className="custom-nav-link">{t.about.title}</Nav.Link>
             <Nav.Link href="#skills" className="custom-nav-link">{t.skills.title}</Nav.Link>
-            <Nav.Link href="#experience" className="custom-nav-link">Experiência</Nav.Link>
-            <Nav.Link href="#projects" className="custom-nav-link">Projetos</Nav.Link>
+            <Nav.Link href="#experience" className="custom-nav-link">{t.experience.title}</Nav.Link>
+            <Nav.Link href="#projects" className="custom-nav-link">{t.projects.title}</Nav.Link>
           </Nav>
           <div className="language-toggle">
             <span>PT</span>

@@ -12,15 +12,15 @@ function Footer() {
             <a href="https://github.com/milenafbn" target="_blank" rel="noopener noreferrer" className="social-icon-footer">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/seuusuario" target="_blank" rel="noopener noreferrer" className="social-icon-footer">
+            <a href="https://www.linkedin.com/in/milena-neves-227739223/" target="_blank" rel="noopener noreferrer" className="social-icon-footer">
               <FaLinkedin />
             </a>
             <a href="mailto:milena.neves.dev@gmail.com" className="social-icon-footer">
               <FaEnvelope />
             </a>
-            <a href="https://wa.me/seunumero" target="_blank" rel="noopener noreferrer" className="social-icon-footer">
+            {/* <a href="https://wa.me/seunumero" target="_blank" rel="noopener noreferrer" className="social-icon-footer">
               <FaWhatsapp />
-            </a>
+            </a> */}
           </div>
           
           <div className="copyright">
