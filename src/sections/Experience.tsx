@@ -1,19 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Experience.css';
 import { useTranslation } from '../context/useTranslation';
 
-
-interface ExperienceItem {
-  id: string;
-  company: string;
-  shortName: string;
-  role: string;
-  period: string;
-  location: string;
-  responsibilities: string[];
-}
 
 const Experience = () => {
   const t = useTranslation();
