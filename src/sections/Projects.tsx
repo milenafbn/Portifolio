@@ -1,20 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import '../styles/Projects.css';
 import { useTranslation } from '../context/useTranslation';
 
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  githubLink?: string;
-  liveLink?: string;
-  contribution: boolean;
-}
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'contribution' | 'personal'>('all');

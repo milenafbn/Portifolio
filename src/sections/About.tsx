@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../styles/About.css';
 import Education_card from '../components/education-card';

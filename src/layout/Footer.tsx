@@ -1,6 +1,5 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import { Container } from 'react-bootstrap';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import '../styles/Footer.css'; 
 
 function Footer() {
