@@ -1,3 +1,4 @@
+
 export const translations = {
   pt: {
     hero: {
@@ -80,7 +81,135 @@ export const translations = {
       title: 'Projetos e colaborações',
       all: 'Todos',
       personal: 'Pessoal',
-      contribution: 'Colaborações'
+      contribution: 'Colaborações',
+      projects: [
+            {
+              id: 'hans-plus',
+              title: 'Hans+',
+              description: 'Aplicativo mobile desenvolvido para o TCC, voltado para apoiar o tratamento de hanseníase. Conta com funcionalidades educativas e de acompanhamento do tratamento.',
+              image: '/projects_images/hans.jpeg',
+              technologies: ['Flutter', 'Dart', 'Android'],
+              liveLink: 'https://hansmais.netlify.app/',
+              contribution: true
+            },
+            {
+              id: 'monitora-saude',
+              title: 'Monitora Saúde',
+              description: 'Painel de monitoramento de dados em saúde, utilizado por 217 municípios. Desenvolvido com foco em visualização de dados e usabilidade.',
+              image: '/projects_images/monitora.jpeg',
+              technologies: ['Laravel', 'PHP', 'JavaScript', 'PostgreSQL', 'Figma', 'Blade', 'HTML', 'CSS', 'Trello'],
+              liveLink: 'https://monitora.saude.ma.gov.br/',
+              contribution: true
+            },
+            {
+              id: 'geohosp',
+              title: 'GeoHosp - Sistema de Gestão Hospitalar',
+              description: 'Sistema completo para gestão de hospitais, incluindo módulos de refeições, exames e consultas. Projeto colaborativo focado em otimização de processos internos.',
+              image: '/projects_images/geohosp.png',
+              technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+              githubLink: 'https://github.com/seuusuario/geohosp',
+              contribution: true
+            },
+            {
+              id: 'renaveh',
+              title: 'Renaveh',
+              description: 'Sistema centralizado para gestão de pacientes e notificações de saúde. Projeto colaborativo com foco em organização e rastreamento de informações clínicas.',
+              image: '/projects_images/renaveh.png',
+              technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+              contribution: true
+            },
+            {
+              id: 'gerenciador-viagens',
+              title: 'Gerenciador de Viagens',
+              description: 'API REST desenvolvida em Java com Spring Boot para gerenciar viagens e destinos, com foco em escalabilidade e boas práticas de desenvolvimento backend.',
+              image: '/projects_images/api.jpg',
+              technologies: ['Java', 'Spring Boot'],
+              githubLink: 'https://github.com/milenafbn/Journey-Planner',
+              contribution: false
+            },
+            {
+              id: 'ml-bankmarketing',
+              title: 'Projeto de Machine Learning - Bank Marketing',
+              description: 'Solução de machine learning utilizando o dataset Bank Marketing para prever respostas de clientes em campanhas bancárias. Inclui pré-processamento, validação cruzada e avaliação de modelos.',
+              image: '/projects_images/ml-bankmarketing.png',
+              technologies: ['Python', 'Scikit-Learn', 'Pandas', 'NumPy', 'Matplotlib'],
+              githubLink: 'https://github.com/milenafbn/Bank-Marketing-Analysis',
+              contribution: true
+            },
+            {
+              id: 'cadserv',
+              title: 'Cadserv',
+              description: 'Sistema de gerenciamento de funcionários para controle de dados pessoais, férias, escolaridade e lotação. Projeto colaborativo.',
+              image: '/projects_images/cadserv.jpeg',
+              technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+              contribution: true
+            },
+            {
+              id: 'primeira-infancia-sem-fome',
+              title: 'Primeira Infância Sem Fome',
+              description: 'Sistema de gerenciamento de dados de funcionários em projetos sociais, incluindo cadastro, férias e escolaridade. Projeto colaborativo.',
+              image: '/projects_images/no-image.png',
+              technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+              contribution: true
+            },
+            {
+              id: 'intelligent-snake-solver',
+              title: 'Intelligent Snake Solver',
+              description: 'Agente inteligente que utiliza o algoritmo A* para resolver automaticamente uma versão do jogo Snake. Projeto acadêmico de IA baseado em objetivos.',
+              image: '/projects_images/snake.png',
+              technologies: ['Python', 'Pygame', 'Algoritmo A*'],
+              githubLink: 'https://github.com/milenafbn/AStarSnakeAgent',
+              contribution: false
+            },
+            {
+              id: 'mario-game',
+              title: 'Mario Game',
+              description: 'Jogo arcade inspirado no clássico Mario, desenvolvido utilizando JavaScript e HTML5 Canvas. Possui animações, obstáculos e sistema de pontuação.',
+              image: '/projects_images/mario.jpeg',
+              technologies: ['JavaScript', 'HTML', 'CSS', 'Canvas'],
+              githubLink: 'https://github.com/milenafbn/MarioGame-Server',
+              contribution: false
+            },
+            {
+              id: 'tic-tac-toe',
+              title: 'Jogo da Velha',
+              description: 'Versão interativa do clássico Jogo da Velha desenvolvida em React, com interface dinâmica e lógica de jogo em tempo real.',
+              image: '/projects_images/tictactoe.jpeg',
+              technologies: ['React'],
+              githubLink: 'https://github.com/milenafbn/tic-tac-toe',
+              liveLink: 'https://milenafbn.github.io/tic-tac-toe/',
+              contribution: false
+            },
+            {
+              id: 'Job-Scraping-Tool',
+              title: 'Job Scraping Tool',
+              description: 'Aplicação em Python para extração de descrições de vagas no site Gupy a partir de um link de busca fornecido pelo usuário. Utiliza Selenium e BeautifulSoup para coletar informações relevantes, extrair palavras-chave dos requisitos e gerar uma nuvem de palavras com as habilidades mais demandadas.',
+              image: '/projects_images/job.png',
+              technologies: ['Python','Selenium','BeautifulSoup'],
+              githubLink: 'https://github.com/milenafbn/Job-Scraping-Tool',
+              contribution: false
+            },
+            {
+              id: 'mapa-hospitais',
+              title: 'Mapa de Hospitais - MA',
+              description: 'Mapa interativo desenvolvido em React que exibe a localização dos hospitais no Maranhão, permitindo a visualização da infraestrutura de saúde do estado.',
+              image: '/projects_images/mapa.png',
+              technologies: ['HTML', 'JavaScript', 'PHP'],
+              githubLink: 'https://github.com/milenafbn/Mapa-Hospitais',
+              contribution: false
+            },
+            {
+              id: 'pivotMesh-adaptation',
+              title: 'Adaptação do PivotMesh',
+              description: 'Exploração da adaptação do modelo PivotMesh para um conjunto de dados personalizado contendo malhas 3D externas. Um objeto LEGO simplificado foi utilizado para avaliar a capacidade de generalização do modelo além da sua distribuição original de treinamento.',
+              image: '/projects_images/pivot.jpeg',
+              technologies: ['Pyhton'],
+              githubLink: 'https://github.com/milenafbn/PivotMesh_adaptation',
+              contribution: false
+            },
+
+
+      ]
     }
   },
 
@@ -168,7 +297,134 @@ export const translations = {
       title: 'Projects and collaborations',
       all: 'All',
       personal: 'Personal',
-      contribution: 'Contributions'
-    },
+      contribution: 'Contributions',
+      projects: [
+        {
+          id: 'hans-plus',
+          title: 'Hans+',
+          description: 'Mobile application developed for the final graduation project, aimed at supporting leprosy treatment. Includes educational and treatment monitoring features.',
+          image: '/projects_images/hans.jpeg',
+          technologies: ['Flutter', 'Dart', 'Android'],
+          liveLink: 'https://hansmais.netlify.app/',
+          contribution: true
+        },
+        {
+          id: 'monitora-saude',
+          title: 'Monitora Saúde',
+          description: 'Health data monitoring dashboard used by 217 municipalities. Developed with a focus on data visualization and usability.',
+          image: '/projects_images/monitora.jpeg',
+          technologies: ['Laravel', 'PHP', 'JavaScript', 'PostgreSQL', 'Figma', 'Blade', 'HTML', 'CSS', 'Trello'],
+          livelink: 'https://monitora.saude.ma.gov.br/',
+          contribution: true
+        },
+        {
+          id: 'geohosp',
+          title: 'GeoHosp - Hospital Management System',
+          description: 'Complete system for hospital management, including meal, exam, and consultation modules. Collaborative project focused on optimizing internal processes.',
+          image: '/projects_images/geohosp.png',
+          technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+          contribution: true
+        },
+        {
+          id: 'renaveh',
+          title: 'Renaveh',
+          description: 'Centralized system for patient and health notification management. Collaborative project focused on organization and tracking of clinical information.',
+          image: '/projects_images/renaveh.png',
+          technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+          contribution: true
+        },
+        {
+          id: 'gerenciador-viagens',
+          title: 'Travel Manager',
+          description: 'REST API developed in Java with Spring Boot to manage trips and destinations, focusing on scalability and backend development best practices.',
+          image: '/projects_images/api.jpg',
+          technologies: ['Java', 'Spring Boot'],
+          githubLink: 'https://github.com/milenafbn/Journey-Planner',
+          contribution: false
+        },
+        {
+          id: 'ml-bankmarketing',
+          title: 'Machine Learning Project - Bank Marketing',
+          description: 'Machine learning solution using the Bank Marketing dataset to predict customer responses to banking campaigns. Includes preprocessing, cross-validation, and model evaluation.',
+          image: '/projects_images/ml-bankmarketing.png',
+          technologies: ['Python', 'Scikit-Learn', 'Pandas', 'NumPy', 'Matplotlib'],
+          githubLink: 'https://github.com/milenafbn/Bank-Marketing-Analysis',
+          contribution: true
+        },
+        {
+          id: 'cadserv',
+          title: 'Cadserv',
+          description: 'Employee management system for controlling personal data, vacation, education, and department allocation. Collaborative project.',
+          image: '/projects_images/cadserv.jpeg',
+          technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+          contribution: true
+        },
+        {
+          id: 'primeira-infancia-sem-fome',
+          title: 'Primeira infância sem fome',
+          description: 'Employee data management system for social projects, including registration, vacation, and education. Collaborative project.',
+          image: '/projects_images/no-image.png',
+          technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
+          contribution: true
+        },
+        {
+          id: 'intelligent-snake-solver',
+          title: 'Intelligent Snake Solver',
+          description: 'Intelligent agent that uses the A* algorithm to automatically solve a version of the Snake game. Academic AI project based on goal-oriented behavior.',
+          image: '/projects_images/snake.png',
+          technologies: ['Python', 'Pygame', 'A* Algorithm'],
+          githubLink: 'https://github.com/milenafbn/AStarSnakeAgent',
+          contribution: false
+        },
+        {
+          id: 'mario-game',
+          title: 'Mario Game',
+          description: 'Arcade game inspired by the classic Mario, developed using JavaScript and HTML5 Canvas. Features animations, obstacles, and a scoring system.',
+          image: '/projects_images/mario.jpeg',
+          technologies: ['JavaScript', 'HTML', 'CSS', 'Canvas'],
+          githubLink: 'https://github.com/milenafbn/MarioGame-Server',
+          contribution: false
+        },
+        {
+          id: 'tic-tac-toe',
+          title: 'Tic-Tac-Toe Game',
+          description: 'A classic Tic-Tac-Toe game developed in React, featuring an interactive interface and real-time game logic.',
+          image: '/projects_images/tictactoe.jpeg',
+          technologies: ['React'],
+          githubLink: 'https://github.com/milenafbn/tic-tac-toe',
+          liveLink: 'https://milenafbn.github.io/tic-tac-toe/',
+          contribution: false
+        },
+        {
+          id: 'Job-Scraping-Tool',
+          title: 'Job Scraping Tool',
+          description: 'Python application that scrapes job descriptions from the Gupy platform based on a user-provided search link. Utilizes Selenium and BeautifulSoup to retrieve relevant job information, extract keywords from requirements, and generate a visual word cloud of the most in-demand skills.',
+          image: '/projects_images/job.png',
+          technologies: ['Python','Selenium','BeautifulSoup'],
+          githubLink: 'https://github.com/milenafbn/Job-Scraping-Tool',
+          contribution: false
+        },
+        {
+          id: 'mapa-hospitais',
+          title: 'Hospitals Map - MA',
+          description: 'Interactive React map displaying the location of hospitals in Maranhão, allowing users to visualize healthcare infrastructure across the state.',
+          image: '/projects_images/mapa.png',
+          technologies: ['HTML','PHP','JavaScript'],
+          githubLink: 'https://github.com/milenafbn/Mapa-Hospitais',
+          contribution: false
+        },
+        {
+          id: 'pivotMesh-adaptation',
+          title: 'PivotMesh Adaptation',
+          description: 'Exploration of the PivotMesh model adaptation to a custom dataset of external 3D meshes. A simplified LEGO object was used to evaluate the model’s generalization capabilities beyond its original training distribution.',
+          image: '/projects_images/pivot.jpeg',
+          technologies: ['React'],
+          githubLink: 'https://github.com/milenafbn/PivotMesh_adaptation',
+          contribution: false
+        },
+
+      ]
+
+    }
   }
 };

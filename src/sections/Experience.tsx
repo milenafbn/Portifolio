@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Experience.css';
+import { useTranslation } from '../context/useTranslation';
+
 
 interface ExperienceItem {
   id: string;
@@ -14,53 +16,9 @@ interface ExperienceItem {
 }
 
 const Experience = () => {
-  const experiences: ExperienceItem[] = [
-        {
-      id: 'Dynamos',
-      company: 'Dynamos',
-      shortName: 'Dynamos',
-      role: 'Desenvolvedora Full Stack',
-      period: 'Abr 2025 - No momento',
-      location: 'São Luís, MA',
-      responsibilities: [
-        'Exerceu papel de liderança técnica sobre equipe júnior, coordenando estagiários no desenvolvimento de sistemas, sendo responsável por organizar demandas, modelar soluções técnicas, elaborar fluxos de processos e conduzir reuniões de alinhamento',
-        'Desenvolveu e deu manutenção em funcionalidades back-end utilizando PHP',
-        'Desenvolveu API’S para comunicação entre sistemas internos e externos',
-        'Criou interfaces dinâmicas integradas via AJAX, com respostas JSON e manipulação assíncrona dos dados',
-        ' Realizou o levantamento e modelagem de dados, criando tabelas, relacionamentos e views otimizadas em MySQL',
-      ]
-    },
-    {
-      id: 'ses',
-      company: 'Secretaria de Estado da Saúde do Maranhão',
-      shortName: 'SES/MA',
-      role: 'Desenvolvedora Full Stack',
-      period: 'Set 2023 - Abr 2025',
-      location: 'São Luís, MA',
-      responsibilities: [
-        'Desenvolveu e manteve sistemas relacionados à saúde, utilizando o framework Laravel para implementar a arquitetura MVC',
-        'Implementou funcionalidades completas no back-end, incluindo criação de rotas, controllers, models, middlewares e lógica de negócios (CRUD)',
-        'Configurou regras de acesso e permissões por meio de sistemas de papéis e autenticação.',
-        'Colaborou com a equipe em reuniões semanais de sprint, contribuindo com sugestões de melhoria e revisão de tarefas.',
-        'Participou da modelagem e implementação de bancos de dados relacionais',
-        'Desenvolveu interfaces responsivas e intuitivas com Blade, HTML, CSS e JavaScript, contribuindo para uma melhor experiência do usuário.'
-      ]
-    },
-    {
-      id: 'cdl',
-      company: 'CDL',
-      shortName: 'CDL',
-      role: 'Estagiária TI',
-      period: 'Jan 2022 - Ago 2023',
-      location: 'São Luís, MA',
-      responsibilities: [
-        'Fornecer assistência aos usuários na utilização dos sistemas da empresa.',
-        'Realizar manutenção e conserto de equipamentos de informática.',
-        'Configurar softwares básicos.',
-        'Participação do desenvolvimento do site da empresa'
-      ]
-    },
-  ];
+  const t = useTranslation();
+  const experiences = t.experience.experiences;
+
 
   const [selectedExp, setSelectedExp] = useState<string>(experiences[0].id);
 
@@ -73,7 +31,7 @@ const Experience = () => {
   return (
     <section id="experience" className="experience-section">
       <Container>
-        <h2 className="section-title">Experiência</h2>
+        <h2 className="section-title">{t.experience.title}</h2>
         
         <Row className="experience-container">
           <Col md={4} className="companies-list">
