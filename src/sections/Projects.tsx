@@ -33,21 +33,21 @@ const Projects = () => {
         className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`}
         onClick={() => setActiveFilter('all')}
           >
-        Todos
+        {t.projects.all}
           </button>
 
           <button 
         className={`filter-btn ${activeFilter === 'personal' ? 'active' : ''}`}
         onClick={() => setActiveFilter('personal')}
           >
-        Pessoal
+        {t.projects.personal}
           </button>
 
           <button 
         className={`filter-btn ${activeFilter === 'contribution' ? 'active' : ''}`}
         onClick={() => setActiveFilter('contribution')}
           >
-        Colaborações
+        {t.projects.contribution}
           </button>
         </div>
         
