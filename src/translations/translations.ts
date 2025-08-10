@@ -107,7 +107,6 @@ export const translations = {
               description: 'Sistema completo para gestão de hospitais, incluindo módulos de refeições, exames e consultas. Projeto colaborativo focado em otimização de processos internos.',
               image: '/projects_images/geohosp.png',
               technologies: ['Laravel', 'Blade', 'MySQL', 'PHP', 'JavaScript', 'Bootstrap', 'MVC', 'Git', 'Trello'],
-              githubLink: 'https://github.com/seuusuario/geohosp',
               contribution: true
             },
             {
