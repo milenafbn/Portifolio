@@ -15,7 +15,9 @@ const Hero: React.FC = () => {
                 
                 <DynamicText/>
                 
-                <button className='cv-button'>{t.hero.cv}</button>
+                <a href={t.hero.resume_pdf} download>
+                    <button className='cv-button'>{t.hero.cv}</button>
+                </a>
             </div>
             
             <div className="social-links">
