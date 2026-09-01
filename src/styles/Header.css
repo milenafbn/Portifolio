@@ -65,7 +65,7 @@
   color: white;
 }
 
-.language-toggle span {
+.language-toggle > span {
   margin: 0 10px;
 }
 
