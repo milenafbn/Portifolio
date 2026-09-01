@@ -5,7 +5,8 @@ export const translations = {
       greeting: 'Olá! meu nome é',
       title: 'Desenvolvedora Full-stack',
       dynamicText: "CConstruindo aplicações eficientes e user-friendly, sempre aprendendo e melhorando.",
-      cv: 'Baixar CV'
+      cv: 'Baixar CV',
+      resume_pdf: '/resumes_pdf/CURRICULO-MILENA.pdf'
     },
     about: {
       title: 'Sobre',
@@ -218,7 +219,8 @@ export const translations = {
       greeting: 'Hi! my name is',
       title: 'Full-stack Developer',
       dynamicText: "BBuilding efficient and user-friendly applications, always learning and improving.",
-      cv: 'Download CV'
+      cv: 'Download CV',
+      resume_pdf: '/resumes_pdf/Milena - resume.pdf'
     },
     about: {
       title: 'About',
