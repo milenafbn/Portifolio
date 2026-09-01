@@ -1,32 +1,21 @@
-import React from 'react';
-import { Switch, ConfigProvider } from 'antd';
 import '../styles/SwitchLanguage.css';
 import { useLanguage } from '../context/LanguageContext';
 
-const SwitchLanguage: React.FC = () => {
+function SwitchLanguage() {
   const { language, toggleLanguage } = useLanguage();
 
   return (
-    <ConfigProvider
-      theme={{
-        token: {
-          colorPrimary: '#5B4150',
-          colorBgContainer: '#fff',
-        },
-        components: {
-          Switch: {
-            handleBg: '#fff',
-            colorPrimary: '#5B4150',
-          },
-        },
-      }}
-    >
-      <Switch
-        checked={language === 'en'} // PT quando está checado
+    <label className="lang-switch" aria-label="Toggle language">
+      <input
+        type="checkbox"
+        checked={language === 'en'}
         onChange={toggleLanguage}
       />
-    </ConfigProvider>
+      <span className="lang-switch-track">
+        <span className="lang-switch-handle" />
+      </span>
+    </label>
   );
-};
+}
 
 export default SwitchLanguage;
