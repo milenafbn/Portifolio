@@ -3,6 +3,7 @@ import Header from './layout/Header'
 import Footer from './layout/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import CustomCursor from './components/CustomCursor'
+import Starfield from './components/Starfield'
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Skills from './sections/Skills'
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <LanguageProvider>
+        <Starfield />
         <CustomCursor />
         <Header />
         <Hero />
