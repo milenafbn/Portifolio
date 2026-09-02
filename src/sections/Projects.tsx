@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import '../styles/Projects.css';
+import SectionTitle from '../components/SectionTitle';
 import { useTranslation } from '../context/useTranslation';
 
 
@@ -26,7 +27,7 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <Container>
-        <h2 className="section-title">{t.projects.title}</h2>
+        <SectionTitle>{t.projects.title}</SectionTitle>
         
         <div className="projects-filter">
           <button 
@@ -52,10 +53,11 @@ const Projects = () => {
         </div>
         
         <div className="projects-scroll-container" style={{ maxHeight: '600px', overflowY: 'auto', paddingRight: '8px' }}>
-          <motion.div 
+          <motion.div
         className="projects-grid"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.5 }}
           >
         {filteredProjects.map((project, index) => (
@@ -63,7 +65,8 @@ const Projects = () => {
             key={project.id}
             className={`project-card ${selectedProject === project.id ? 'expanded' : ''}`}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             onClick={() => handleProjectClick(project.id)}
             layoutId={`project-container-${project.id}`}
@@ -82,7 +85,8 @@ const Projects = () => {
             </motion.div>
           </Col>
           <Col md={7} className="project-info">
-            <motion.h3 
+            <span className="card-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <motion.h3
               className="project-title"
               layoutId={`project-title-${project.id}`}
             >

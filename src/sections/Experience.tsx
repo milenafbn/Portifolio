@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Experience.css';
+import SectionTitle from '../components/SectionTitle';
 import { useTranslation } from '../context/useTranslation';
 
 
@@ -21,8 +22,14 @@ const Experience = () => {
   return (
     <section id="experience" className="experience-section">
       <Container>
-        <h2 className="section-title">{t.experience.title}</h2>
-        
+        <SectionTitle>{t.experience.title}</SectionTitle>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+        >
         <Row className="experience-container">
           <Col md={4} className="companies-list">
             {experiences.map((exp) => (
@@ -47,6 +54,7 @@ const Experience = () => {
                 transition={{ duration: 0.3 }}
                 className="experience-content"
               >
+                <span className="card-dots" aria-hidden="true"><i></i><i></i><i></i></span>
                 <div className="experience-header">
                   <h3 className="role-title">{currentExp.role}</h3>
                   <span className="company-location">{currentExp.shortName}</span>
@@ -72,6 +80,7 @@ const Experience = () => {
             </AnimatePresence>
           </Col>
         </Row>
+        </motion.div>
       </Container>
     </section>
   );

@@ -7,25 +7,6 @@
     align-items: center;
   }
   
-  .section-title {
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 40px;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-  }
-
-  .section-title:after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: var(--primary-color);
-    bottom: -10px;
-    left: 0;
-  }
-  
   .about-content {
     max-width: 800px;
     margin: 0 auto;

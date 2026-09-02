@@ -17,6 +17,15 @@ body {
   color: var(--text-color);
   font-family: var(--primary-font);
   margin: 0px 70px 0px 70px;
+  position: relative;
+
+  /* Duas manchas de luz suaves nos cantos */
+  background-image:
+    radial-gradient(ellipse 900px 600px at 8% -10%, rgba(254, 175, 190, 0.12), transparent 60%),
+    radial-gradient(ellipse 800px 600px at 108% 20%, rgba(205, 215, 247, 0.10), transparent 60%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%, 100% 100%;
+  background-attachment: fixed, fixed;
 }
 
 @media (max-width: 768px) {
@@ -24,4 +33,65 @@ body {
     margin: 0px 20px;
     font-size: 14px;
   }
+}
+
+/* Título de seção com motivo de código, ex: <Sobre /> */
+.section-title {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  color: var(--primary-color);
+  font-family: 'consolas', monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title-tag {
+  color: var(--secondary-color);
+  opacity: 0.45;
+  font-weight: 400;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+  bottom: -10px;
+  left: 0;
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Pontinhos de "janela de terminal" usados no topo dos cards */
+.card-dots {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.card-dots i {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  opacity: 0.35;
+}
+
+.card-dots i:nth-child(2) {
+  background-color: var(--secondary-color);
+  opacity: 0.4;
+}
+
+.card-dots i:nth-child(3) {
+  background-color: var(--box-color);
+  opacity: 0.7;
 }
